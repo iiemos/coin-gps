@@ -13,7 +13,7 @@ summary:
   pic: '/img/pic/req_token.jpg'
 ---
 
-# 无痛刷新token（签名）解决方案
+# 🍚 无痛刷新token（签名）解决方案
 
  #### 需求：小程序无用户登录，但是为了数据安全，API接口需要token进行签名验证，当token过期的时候，无感刷新token
 

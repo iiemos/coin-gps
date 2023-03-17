@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       script: [
         // { // 谷歌分析替代品
         //   defer: true,
-        //   'data-domain': 'content.nuxtjs.org',
+        //   'data-domain': 'iiemo.com',
         //   src: 'https://plausible.io/js/script.js'
         // }
       ]

@@ -4,11 +4,11 @@ keywords: '一朵大呲花,IT博客,技术博客,区块链博客'
 description: 'Electron Module format cjs does not support top-level await. Use the "es" or "system" output formats rather'
 ---
 
-# JS 中顶级 await 报错
+# 🍑 JS 中顶级 await 报错
  - 今天在`electron + vite`项目开发完成，打测试包的时候出现这个错误
   - 原因： vite打包模式不支持顶级模块进行await（异步），建议使用es或者system输出格式（同步）
   - 解决方案： `import.meta.glob` 替换成 `import.meta.globEager` 异步换成同步
-## 源码
+## 🥦 源码
 ``` typescript
 /* 报错源码
     动态异步引入所有文件然后导出

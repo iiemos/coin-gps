@@ -12,11 +12,11 @@ summary:
   pic: ''
 ---
 
-# nuxt3 sitemap 生成网站地图
+# 🌲 Sitemap 生成网站地图
 
 ---
 
-## 自定义 sitemap 文件
+## 🌳 自定义 Sitemap 文件
 
 ```ts
 // static/sitemap.js
@@ -93,7 +93,7 @@ for (let i = 0; i < arrTime.length; i++) {
 export default sitemap
 ```
 
-## nuxt.config.js 中使用
+## 🌴 nuxt.config.js 中使用
 
 ```ts
 import sitemap from './static/sitemap'

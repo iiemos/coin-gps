@@ -13,7 +13,7 @@ summary:
   pic: ''
 ---
 
-# NSIS 多语言使用
+# 🍋 NSIS 多语言使用
 Windows安装程序多语言
 - 当安装程序启动时通过以下步骤选择界面语言:
   - 1. 获取用户的默认 Windows 用户界面语言
@@ -24,14 +24,14 @@ Windows安装程序多语言
 
 
 
-## 首先在NSI文件中添加需要支持语言的宏
+## 🍍 首先在NSI文件中添加需要支持语言的宏
 ```ts
   !insertmacro MUI_LANGUAGE "English" ; 英文
   !insertmacro MUI_LANGUAGE "SimpChinese" ; 中简
   !insertmacro MUI_LANGUAGE "TradChinese" ; 中繁
   // 这里只做中英繁文示例，其它语言相同，只是宏不一样。
 ```
-## 添加完宏之后，有两种定义方式
+## 🍈 添加完宏之后，有两种定义方式
   1. - 字符串定义方式（`名称 语言ID 字符串`）
         -  每一个语言字符串都有一个特定的名字和一个用于安装程序分配给每一种语言的值。 他们可以在脚本里用于任何运行时字符串。使用一个语言字符串你所需要做的就是把 $(LangString_name_here) 插入到你想插入字串的地方。
         
@@ -62,7 +62,7 @@ Windows安装程序多语言
         ```
 
 
-## 初始化函数中获取系统语言，弹出选择语言框
+## 🍐 初始化函数中获取系统语言，弹出选择语言框
   ```ts
     ;初始化函数
     Function .onInit

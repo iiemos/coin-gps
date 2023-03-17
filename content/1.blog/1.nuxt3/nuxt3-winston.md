@@ -13,11 +13,11 @@ summary:
   pic: ''
 ---
 
-# nuxt3 winston 收集自定义日志
+# 🍇 Winston 收集自定义日志
 
 ---
 
-## 在 nuxt.config.js 引入 winston
+## 🍈 在 nuxt.config.js 引入 winston
 
 ```ts
 // nuxt.config.js
@@ -26,7 +26,7 @@ import moment from 'moment'
 import { format, transports } from 'winston'
 ```
 
-## 自定义日志格式
+## 🍊 自定义日志格式
 
 ```ts
 // nuxt.config.js
@@ -36,7 +36,7 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
 })
 ```
 
-## 自定义日志存放路径
+## 🍋 自定义日志存放路径
 
 ```ts
 // nuxt.config.js
@@ -77,7 +77,7 @@ const winstonLog =
     : {}
 ```
 
-## 在 nuxt.config.js 中注册
+## 🍍 在 nuxt.config.js 中注册
 
 ```ts
 // nuxt.config.js
@@ -87,7 +87,7 @@ export default {
 }
 ```
 
-## 在 axios 请求封装模块中使用
+## 🥭 在 axios 请求封装模块中使用
 
 ```ts
   // plugins/interceptor.js

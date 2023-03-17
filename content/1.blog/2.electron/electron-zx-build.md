@@ -13,13 +13,13 @@ summary:
   pic: ''
 ---
 
-# Electron 自定义循环打多个包
+# 🧀 Electron 自定义循环打多个包
 
 接到 SEO 需求，需要打 N 多个渠道包，用于统计各个渠道用户的日活，并且生成不同的配置项文件，用于区别统计用户日活
 
 - 思路：自定义 package 打包脚本，实现自定义打包的需求
 
-### 方式一：通过 Google github 开源 [zx](https://github.com/google/zx){:target="\_blank"} 脚本工具实现
+## 🍞 方式一：通过 Google github 开源 [zx](https://github.com/google/zx){:target="\_blank"} 脚本工具实现
 
 ```json
 // package.json
@@ -131,7 +131,7 @@ export async function runnerLog(promiseCli: () => Promise<unknown>, logInfo: Log
 }
 ```
 
-### 方式二：通过 rollup 自定义 rollupOptions 配置项进行打包
+## 🥪  方式二：通过 rollup 自定义 rollupOptions 配置项进行打包
 
 ```ts
 import { $, path } from 'zx'

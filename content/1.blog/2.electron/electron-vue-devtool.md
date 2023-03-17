@@ -13,7 +13,7 @@ summary:
   pic: '/img/pic/electron_vue_devtool.jpg'
 ---
 
-# electron [vue-devtools] 安装
+# 🌰 electron [vue-devtools] 安装
 
 - 首先需要安装vue-devtools 有三种安装方式 
   - `electron-devtools-installer`
@@ -44,7 +44,7 @@ session.defaultSession.getAllExtensions()
 ```
 > 所以之前各种百度出来的方法都不能用了，专门出一个避坑指南！！
 
-## electron-devtools-installer
+## 🍔 electron-devtools-installer
 - 安装 `electron-devtools-installer`
 ```javascript
 yarn add electron-devtools-installer
@@ -66,7 +66,7 @@ app.on('ready', () => {
 
 
 
-## 本地chrome插件安装
+## 🍩 本地chrome插件安装
 - 如果你的本地chrome已经安装过`vue-devtools`了，并且不想再去[github](https://github.com/vuejs/vue-devtools){:target="_blank"}上下载进行打包折腾，那就用这个方法
   - `chrome://extensions/` 进入插件管理页面，勾选开发者模式，找到对应插件的 ​id​
   ![chrome插件管理页面](/img/works/extensions.jpg)
@@ -96,7 +96,7 @@ app.on('ready', () => {
 > 然后你就可以在electron上面愉快的使用 vue-devTools了！！！
 
 
-## github下载打包安装
+## 🍰 github下载打包安装
 
 - 去[vue-devtools](https://github.com/vuejs/vue-devtools){:target="_blank"} 下载zip包或者从github克隆vue-devtools
 
