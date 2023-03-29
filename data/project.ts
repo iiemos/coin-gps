@@ -27,8 +27,13 @@ export default {
   BLOCKCHAIN: [
     {
       lab: 'Dapp',
-      img: 'https://www.wikifx.com',
-      link: 'https://',
-    }
+      img: '/img/project/timeswap.png',
+      link: 'https://timeswap.io',
+    },
+    // {
+    //   lab: 'Dapp',
+    //   img: 'https://www.wikifx.com',
+    //   link: 'https://',
+    // }
   ],
 }

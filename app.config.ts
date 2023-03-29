@@ -6,12 +6,12 @@ export default defineAppConfig({
   },
   docus: {
     title: 'iiEmo',
-    description: 'Write pages in markdown, use Vue components and enjoy the power of Nuxt with a blazing fast developer experience.',
+    description: '一朵大呲花,IT博客,技术博客,区块链博客.',
     image: 'https://content.nuxtjs.org/preview.png',
-    url: 'https://content.nuxtjs.org',
+    url: 'https://www.iiemo.com',
     socials: {
-      twitter: '@nuxt_js',
-      github: 'nuxt/content',
+      // twitter: '@iiemo',
+      github: 'iiemos',
     },
     github: {
       dir: 'docs/content',
@@ -38,22 +38,10 @@ export default defineAppConfig({
     footer: {
       credits: {
         text: 'iiEmo',
-        // icon: 'IconDocus',
         icon: 'IconGhost',
-        href: '/',
+        href: '#'
       },
-      iconLinks: [
-        {
-          label: 'NuxtJS',
-          href: 'https://nuxtjs.org',
-          icon: 'IconNuxt'
-        },
-        {
-          label: 'Vue Telescope',
-          href: 'https://vuetelescope.com',
-          icon: 'IconVueTelescope'
-        }
-      ]
+      iconLinks: []
     }
   }
 })

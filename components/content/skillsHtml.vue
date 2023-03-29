@@ -1,54 +1,19 @@
 <script setup>
-import { ref } from 'vue'
-import project from '@/data/project'
-const { WEB, APPLETS, BLOCKCHAIN } = project
-let change = ref('ALL')
-let tabs = [
-  'ALL',
-  'WEB',
-  'APPLETS',
-  'BLOCKCHAIN',
-]
-const ALL = ref([
-  ...WEB,
-  ...APPLETS,
-  ...BLOCKCHAIN,
-])
-const changeTabs = (i)=>{
-  if(i == 'ALL') ALL.value = [ ...WEB, ...APPLETS, ...BLOCKCHAIN]
-  if(i == 'WEB') ALL.value = WEB
-  if(i == 'APPLETS') ALL.value = APPLETS
-  if(i == 'BLOCKCHAIN') ALL.value = BLOCKCHAIN
-  change.value = i
-}
+import skills from '@/data/skills'
+import { randomColor } from '@/data/global'
+const { skill } = skills
 </script>
 <template>
-  <div class="iiemo_links">
-    <div class="_link_box">
-      <h1 class="_links_title">Portfolio (项目)</h1>
-      <div class="links_tabs_warp">
-        <div class="links_tabs">
-          <div
-            v-for="item in tabs"
-            :key="item"
-            class="_tabs_item"
-            @click="changeTabs(item)"
-            :class="{'_active': item == change}">
-            {{ item }}
-          </div>
-        </div>
-      </div>
-      <div class="_links_warp">
-        <div
-          v-for="lItem,index in ALL"
-          :key="lItem.link"
-          class="_links_item ani-bottomIn" :class="`ani-delay-${index}`">
-          <img class="_item_img" :src="lItem.img">
-          <div class="_item_mode">
-            <div class="_mode_title">{{ lItem.lab }}</div> 
-            <div class="_mode_desc"> {{ lItem.link }}</div>
-            <img v-if="lItem.qrcode" class="_item_qr_code" :src="lItem.qrcode">
-          </div>
+  <div class="iiemo_skills">
+    <div class="_skills_tlt">
+      Skills (技能)
+    </div>
+    <div class="skill_item" v-for="item,idx in skill" :key="idx">
+      <div class="_item_tlt">{{ item.name }}</div>
+      <div class="_item_con">
+        <div class="_item_ctx ani-leftIn" v-for="items,idxs in item.list" :key="idxs"  :class="`ani-delay-${idxs}`">
+          <Icon :name="items.icon" />
+          <span :style="{ color: randomColor() }">{{ items.name }}</span>
         </div>
       </div>
     </div>
@@ -56,7 +21,7 @@ const changeTabs = (i)=>{
 </template>
 <style lang="ts" scoped>
 css({
-  '.iiemo_links': {
+  '.iiemo_skills': {
     position: 'relative',
     fontFamily: 'var(--font-mono)',
     paddingBottom: '{space.20}',
@@ -66,75 +31,68 @@ css({
     '@lg': {
       paddingBottom: '{space.32}',
     },
-    '.links_tabs_warp': {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      marginBottom: '40px',
-      '.links_tabs': {
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '{space.2}',
-        borderRadius: '99px',
-        boxShadow: '0 0 1px 0 #185ee026, 0 6px 12px 0 #185ee026',
-      },
-      '._tabs_item': {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '0.75rem',
-        fontWeight: '800',
-        borderRadius: '99px',
-        cursor: 'pointer',
-        '&._active': {
-          color: 'var(--color-white)',
-          background: '{color.primary.600}',
-        },
-      },
-
+    '._skills_tlt': {
+      fontWeight: '{fontWeight.bold}',
+      fontSize: '{text.4xl.fontSize}',
+      lineHeight: '{text.4xl.lineHeight}',
+      '@sm': {
+        fontSize: '{text.3xl.fontSize}',
+        lineHeight: '{text.3xl.lineHeight}',
+      }
     },
-    '._links_title': {
+    '._item_tlt': {
       marginBottom: '{space.8}',
-      fontSize: '{text.3xl.fontSize}',
-      lineHeight: '{text.3xl.lineHeight}',
+      marginTop: '{space.8}',
+      fontSize: '{text.2xl.fontSize}',
+      lineHeight: '{text.2xl.lineHeight}',
       fontWeight: '{fontWeight.bold}',
       letterSpacing: '{letterSpacing.tight}',
       color: '{elements.text.primary.color.static}',
       '@sm': {
-        fontSize: '{text.4xl.fontSize}',
-        lineHeight: '{text.4xl.lineHeight}',
+        fontSize: '{text.2xl.fontSize}',
+        lineHeight: '{text.2xl.lineHeight}',
       }
     },
-    '._links_warp': {
+    '._item_con': {
       display: 'grid',
       gap: '{space.4}',
       textAlign: 'start',
       '@sm': {
-        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
+        gridTemplateColumns: 'repeat(8, minmax(0, 1fr))'
       },
       '@lg': {
-        gridTemplateColumns: 'repeat(3, minmax(0, 1fr))'
+        gridTemplateColumns: 'repeat(8, minmax(0, 1fr))'
       },
       '@2xl': {
         gap: '{space.8}'
       }
     },
-    '._links_item': {
-      display: 'block',
+    '._item_ctx': {
       position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'inherit',
       width: '100%',
+      fontFamily: 'var(--font-mono)',
       padding: '{space.2}',
       borderRadius: '{radii.xl}',
       cursor: 'pointer',
-      color: '{color.primary.900}',
-      border: '1px solid {elements.border.primary.static}',
       background: '{elements.backdrop.background}',
-      // transition: 'all .3s ease-in-out,translateY .3s ease-in-out,box-shadow .3s ease-in-out',
+      transition: 'all .3s ease-in-out,translateY .3s ease-in-out,box-shadow .3s ease-in-out',
+      '@sm': {
+        flexDirection: 'column'
+      },
+      '@lg': {
+        flexDirection: 'inherit'
+      },
+      '@2xl': {
+        flexDirection: 'inherit',
+      },
+      'svg':{
+        marginRight: '8px',
+      },
       '&:hover': {
-        // transform: 'translateY(-5px)',
-        borderColor: '{color.primary.400}',
+        transform: 'translateY(-5px)',
         '@dark': {
           color: '{color.primary.100}',
           backgroundColor: '{color.primary.900}'
@@ -145,36 +103,6 @@ css({
           backgroundImage: 'repeating-linear-gradient(45deg,#614eda98,#8631e798)',
         }
       },
-      '._item_img': {
-        maxHeight:  '270px',
-        margin: '0 auto',
-        objectFit: 'cover'
-      },
-      '._item_mode': {
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        transition: 'all 0.3s',
-        opacity: '0',
-        width: '100%',
-        height: '100%',
-        borderRadius: '{radii.xl}',
-        display: 'flex',
-        color: '#fff',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        '._mode_title':{
-          fontWeight: 600,
-          fontSize: '{text.3xl.fontSize}',
-          fontFamily: 'var(--font-mono)'
-        },
-        '._mode_desc':{
-          textTransform: 'uppercase'
-        },
-        '._item_qr_code':{
-        }
-      }
     }
   },
   '.ani-leftIn':{

@@ -52,7 +52,7 @@ export default defineNuxtConfig({
       // @ts-ignore
       // TODO: fix types
       documentDriven: {
-        host: 'https://content.nuxtjs.org'
+        host: 'https://www.iiemo.com'
       }
     },
     public: {
