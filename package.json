@@ -14,6 +14,7 @@
     "@element-plus/nuxt": "^1.0.4",
     "@nuxt-themes/docus": "^1.9.0",
     "@nuxt/eslint-config": "^0.1.1",
+    "element-plus": "^2.3.1",
     "eslint": "^8.35.0",
     "nuxt": "^3.2.2"
   }

@@ -8,11 +8,11 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [
-        // { // 谷歌分析替代品
-        //   defer: true,
-        //   'data-domain': 'iiemo.com',
-        //   src: 'https://plausible.io/js/script.js'
-        // }
+        { // 谷歌分析替代品
+          defer: true,
+          'data-domain': 'iiemo.com',
+          src: 'https://plausible.io/js/script.js'
+        }
       ]
     }
   },
@@ -25,6 +25,7 @@ export default defineNuxtConfig({
   plugins: [
     
   ],
+  elementPlus: { /** Options */ },
   components: [
     { path: resolveThemeDir('components/icons'), global: true, prefix: '' },
   ],

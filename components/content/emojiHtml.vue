@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ElMessage } from 'element-plus'
 import data from '@/data/emoji.json'
 const source = ref('')
 const { copy } = useClipboard({ source })
