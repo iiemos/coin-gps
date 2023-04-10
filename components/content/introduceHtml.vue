@@ -13,8 +13,8 @@ const isTranslate = ref(false)
       <div class="_item_ctx ani-leftIn"  :class="`ani-delay-${idx}`">
         <IconSuccess />
         <div>
-          <p v-show="isTranslate">{{ items.desc }}</p>
-          <p v-show="!isTranslate">{{ items.en_desc }}</p>
+          <p v-show="isTranslate">{{ items.en_desc }}</p>
+          <p v-show="!isTranslate">{{ items.desc }}</p>
         </div>
       </div>
     </div>
