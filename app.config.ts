@@ -41,6 +41,18 @@ export default defineAppConfig({
         icon: 'IconGhost',
         href: '#'
       },
+      textLinks: [
+        {
+          text: '豫ICP备 2022025751号-1',
+          href: 'https://beian.miit.gov.cn/',
+          target: '_blank'
+        },
+        {
+          text: 'UPYUN',
+          href: 'https://www.upyun.com/',
+          target: '_blank'
+        },
+      ],
       iconLinks: []
     }
   }
