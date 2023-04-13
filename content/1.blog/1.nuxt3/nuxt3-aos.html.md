@@ -31,11 +31,12 @@ css:[
 ```
 
 ## 页面中使用
-
-<template>
-  <div data-aos="fade-up" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
-  <div data-aos="fade-down" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
-  <div data-aos="fade-right" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
-  <div data-aos="fade-left" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
-  <div data-aos="fade-right" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
-</template>
+```ts
+  <template>
+    <div data-aos="fade-up" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
+    <div data-aos="fade-down" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
+    <div data-aos="fade-right" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
+    <div data-aos="fade-left" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
+    <div data-aos="fade-right" class="tw-w-40 tw-h-40 tw-bg-red-400 my-10" ></div>
+  </template>
+```

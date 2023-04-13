@@ -16,7 +16,7 @@ export default defineAppConfig({
     github: {
       dir: 'docs/content',
       root: 'docs/content',
-      edit: true,
+      edit: false,
       releases: true,
       owner: 'nuxt',
       repo: 'content',
