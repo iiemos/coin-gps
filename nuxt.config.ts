@@ -16,18 +16,43 @@ export default defineNuxtConfig({
       ]
     }
   },
+  css:[
+    'aos/dist/aos.css',
+    '@/assets/css/entry.css',
+    '@/assets/css/cardItem.css',
+  ],
   content:{
     highlight: {
       preload: ['xml']
     }
   },
-  modules: ['@nuxt-themes/tokens', '@element-plus/nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt-themes/tokens',
+    '@element-plus/nuxt'
+  ],
   plugins: [
     
   ],
+  i18n: {
+    locales: () => [{
+      code: 'fr',
+      iso: 'fr-FR',
+      file: 'fr-FR.js',
+      name: 'Français'
+    }, {
+      code: 'en',
+      iso: 'en-US',
+      file: 'en-US.js',
+      name: 'English'
+    }],
+    defaultLocale: 'en'
+  },
   elementPlus: { /** Options */ },
   components: [
     { path: resolveThemeDir('components/icons'), global: true, prefix: '' },
+    { path: resolveThemeDir('components/home'), global: true, prefix: '' },
+    { path: resolveThemeDir('components/docs'), global: true, prefix: '' },
   ],
   extends: '@nuxt-themes/docus',
   github: {
@@ -36,7 +61,7 @@ export default defineNuxtConfig({
     branch: 'main'
   },
   colorMode: {
-    preference: 'dark'
+    preference: 'system'
   },
   highlight: {
     theme: {

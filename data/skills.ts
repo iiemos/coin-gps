@@ -18,7 +18,7 @@ export default {
         {
           name: 'NextJS',
           icon: 'logos:nextjs-icon',
-        },
+        },                  
         {
           name: 'EggJS',
           icon: 'openmoji:egg',

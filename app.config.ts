@@ -10,13 +10,20 @@ export default defineAppConfig({
     image: 'https://content.nuxtjs.org/preview.png',
     url: 'https://www.iiemo.com',
     socials: {
-      // twitter: '@iiemo',
+      twitter: '@iiemo',
       github: 'iiemos',
+    },
+    headerAD: {
+      isShow: true,
+      icon:'🌰',
+      text: '中文课程已上线',
+      linkText: '《Nuxt3全栈实战开发简书》',
+      link: 'https://www.nuxt.com',
     },
     github: {
       dir: 'docs/content',
       root: 'docs/content',
-      edit: true,
+      edit: false,
       releases: true,
       owner: 'nuxt',
       repo: 'content',
