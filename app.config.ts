@@ -5,7 +5,7 @@ export default defineAppConfig({
     branch: 'main'
   },
   docus: {
-    title: 'iiEmo',
+    title: 'CoinGPS',
     description: '一朵大呲花,IT博客,技术博客,区块链博客.',
     image: 'https://content.nuxtjs.org/preview.png',
     url: 'https://www.iiemo.com',
@@ -44,19 +44,19 @@ export default defineAppConfig({
     },
     footer: {
       credits: {
-        text: 'iiEmo',
+        text: 'CoinGPS',
         icon: 'IconGhost',
         href: '#'
       },
       textLinks: [
         {
-          text: '豫ICP备 2022025751号-1',
-          href: 'https://beian.miit.gov.cn/',
+          text: 'GitHub',
+          href: '',
           target: '_blank'
         },
         {
-          text: 'UPYUN',
-          href: 'https://www.upyun.com/',
+          text: '',
+          href: '',
           target: '_blank'
         },
       ],

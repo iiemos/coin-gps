@@ -1,5 +1,5 @@
 :root {
-    --gradient-angle: 360deg
+    --gradient-angle: 360deg;
 }
 
 @keyframes gradient-rotate {

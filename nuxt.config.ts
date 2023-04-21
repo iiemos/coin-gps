@@ -53,6 +53,7 @@ export default defineNuxtConfig({
     { path: resolveThemeDir('components/icons'), global: true, prefix: '' },
     { path: resolveThemeDir('components/home'), global: true, prefix: '' },
     { path: resolveThemeDir('components/docs'), global: true, prefix: '' },
+    { path: resolveThemeDir('components/ctx'), global: true, prefix: '' },
   ],
   extends: '@nuxt-themes/docus',
   github: {
