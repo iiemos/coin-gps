@@ -1,6 +1,5 @@
 import { resolve } from 'pathe'
 import { createResolver } from '@nuxt/kit'
-
 const { resolve: resolveThemeDir } = createResolver(import.meta.url)
 const alias = {}
 export default defineNuxtConfig({
@@ -32,7 +31,6 @@ export default defineNuxtConfig({
     '@element-plus/nuxt'
   ],
   plugins: [
-    
   ],
   i18n: {
     locales: () => [{
