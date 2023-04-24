@@ -334,8 +334,15 @@ a:focus {
 .cursor-pointer {
     cursor: pointer
 }
+.gradient-border-2 {
+    border: 2px solid transparent;
+}
 
-
+.border-gradient-br-gradient-gray-900 {
+    background: linear-gradient(90deg,#18181b,#18181b),linear-gradient(to bottom right,#00dc82,#36e4da,#16a79e);
+    background-clip: padding-box,border-box;
+    background-origin: padding-box,border-box
+}
 @-webkit-keyframes jumps {
     0% {
         transform: translate(0)

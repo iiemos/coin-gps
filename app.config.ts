@@ -10,11 +10,10 @@ export default defineAppConfig({
     image: 'https://content.nuxtjs.org/preview.png',
     url: 'https://www.iiemo.com',
     socials: {
-      twitter: '@iiemo',
-      github: 'iiemos',
+      twitter: '',
     },
     headerAD: {
-      isShow: true,
+      isShow: false,
       icon:'🌰',
       text: '中文课程已上线',
       linkText: '《Nuxt3全栈实战开发简书》',

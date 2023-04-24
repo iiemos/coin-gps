@@ -10,6 +10,8 @@ const getDataFile =  async ()=> {
   return module.default
 }
 const res:any = await getDataFile()
+console.log('res.data.length',res.data.length);
+
 </script>
 
 <template>
