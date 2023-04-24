@@ -8,7 +8,7 @@
                 class="relative flex items-center justify-center bg-white dark:bg-gray-900 h-[86px] w-[86px] rounded-md ring-1 ring-gray-200 hover:ring-0 dark:ring-0 mt-1"
                 tabindex="-1">
                 <div><img
-                    src="@/img/xm/osmosis.png"
+                    src="/img/exchange/CoinMarketCap.svg"
                     alt="tailwindcss" class="w-auto h-8 sm:h-12" loading="lazy" height="48" width="48"></div>
                 <div class="hidden gradient-border gradient-border-dark dark:block"></div>
                 <div class="dark:hidden gradient-border gradient-border-light"></div>
