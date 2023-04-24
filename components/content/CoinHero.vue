@@ -76,7 +76,7 @@ defineProps({
           height="320"
           viewBox="0 0 320 320"
           fill="none"
-          stroke="#000"
+          stroke="#65a30d"
           stroke-linecap="round"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
