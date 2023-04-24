@@ -56,13 +56,4 @@ export default {
       　　开发人员可以使用 OpenZeppelin 的原生 SDK 将 OpenZeppelin Contracts 集成到他们的项目中。此外，他们可以使用公司的游戏化元素（例如 Etherenaut）来识别智能合约错误。该游戏让用户参与 Web3 – Solidity 战争游戏来破解智能合约，从而发现漏洞和错误。`,
     },
   ],
-  tool: [
-    {
-      Name: 'Google Authenticator',
-      Icon: '/img/audit/GoogleAuthenticator.svg',
-      Type: ['Tool'],
-      OfficialUrl: 'https://googleauthenticator.net/',
-      desc: `Google 身份验证器会在您的手机上生成两步验证码。`,
-    },
-  ]
 }

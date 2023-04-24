@@ -1111,6 +1111,16 @@
     is-reference "1.2.1"
     magic-string "^0.27.0"
 
+"@rollup/plugin-dynamic-import-vars@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.npmmirror.com/@rollup/plugin-dynamic-import-vars/-/plugin-dynamic-import-vars-2.0.3.tgz#0f0c090d2569463b390603a2139ab4bbf2b4add6"
+  integrity sha512-0zQV0TDDewilU+7ZLmwc0u44SkeRxSxMdINBuX5isrQGJ6EdTjVL1TcnOZ9In99byaSGAQnHmSFw+6hm0E/jrw==
+  dependencies:
+    "@rollup/pluginutils" "^5.0.1"
+    estree-walker "^2.0.2"
+    fast-glob "^3.2.12"
+    magic-string "^0.27.0"
+
 "@rollup/plugin-inject@^5.0.3":
   version "5.0.3"
   resolved "https://registry.npmmirror.com/@rollup/plugin-inject/-/plugin-inject-5.0.3.tgz#0783711efd93a9547d52971db73b2fb6140a67b1"
