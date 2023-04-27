@@ -3,7 +3,7 @@ export default {
     {
       Name: "OKC Bridge",
       Icon: "/img/wallet/OKX.svg",
-      Type: ["Official"],
+      Type: ["官方桥"],
       OfficialUrl: "https://www.okx.com/cn/oktc/bridge",
       Twitter: "",
       Telegram: "",
@@ -15,7 +15,7 @@ export default {
     {
       Name: "Arbitrum Bridge",
       Icon: "/img/crypto-logo/Arbitrum (ARB).svg",
-      Type: ["Official"],
+      Type: ["官方桥"],
       OfficialUrl: "https://bridge.arbitrum.io/",
       Twitter: "",
       Telegram: "",
@@ -27,7 +27,7 @@ export default {
     {
       Name: "Optimism Bridge",
       Icon: "/img/crypto-logo/Optimism (OP).svg",
-      Type: ["Official"],
+      Type: ["官方桥"],
       OfficialUrl: "https://app.optimism.io/bridge/deposit",
       Twitter: "",
       Telegram: "",
@@ -39,7 +39,7 @@ export default {
     {
       Name: "Polygon Bridge",
       Icon: "/img/crypto-logo/Polygon (MATIC).svg",
-      Type: ["Official"],
+      Type: ["官方桥"],
       OfficialUrl: "https://wallet.polygon.technology/",
       Twitter: "",
       Telegram: "",
@@ -51,7 +51,7 @@ export default {
     {
       Name: "Rainbow Bridge",
       Icon: "/img/bridge/Rainbow-bridge.svg",
-      Type: ["Official"],
+      Type: ["官方桥"],
       OfficialUrl: "https://rainbowbridge.app/transfer",
       Twitter: "",
       Telegram: "",
@@ -63,7 +63,7 @@ export default {
     {
       Name: "Terra Bridge",
       Icon: "/img/crypto-logo/Terra (LUNA).svg",
-      Type: ["Official"],
+      Type: ["官方桥"],
       OfficialUrl: "https://bridge.terra.money/",
       Twitter: "",
       Telegram: "",
@@ -75,7 +75,7 @@ export default {
     {
       Name: "Wormhole Bridge",
       Icon: "/img/bridge/Wormhole.svg",
-      Type: ["Official"],
+      Type: ["官方桥"],
       OfficialUrl: "https://www.portalbridge.com/#/transfer",
       Twitter: "",
       Telegram: "",
@@ -87,7 +87,7 @@ export default {
     {
       Name: "Avax Bridge",
       Icon: "/img/bridge/AvaxBridge.svg",
-      Type: ["Official"],
+      Type: ["官方桥"],
       OfficialUrl: "https://core.app/bridge/",
       Twitter: "",
       Telegram: "",

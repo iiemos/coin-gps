@@ -35,6 +35,7 @@ const readExcel1 = (files,type)=> {
         // 生成json表格内容
         const ws = utils.sheet_to_json(workbook.Sheets[wsname])
         // 后续为自己对ws数据的处理
+        console.log('ws',ws);
         let lis
         if(type == 'exchange') {
           lis = ws.map((e)=>{
@@ -44,6 +45,10 @@ const readExcel1 = (files,type)=> {
               Coins: e['#_Coins'], 
               Markets: e['#_Markets'], 
               Icon: e['Exchange.2_SRC'], 
+              Liquidity: e['Avg._Liquidity'], 
+              WeeklyVisits: e['Weekly_Visits'],
+              FiatSupported1: e['Fiat_Supported.1'],
+              FiatSupported2: e['Fiat_Supported.2'],
             }
           })
         }
@@ -54,6 +59,7 @@ const readExcel1 = (files,type)=> {
               Type: e.Type, 
               Launched: e.Launched, 
               Markets: e['No._Markets'], 
+              MktShare: e['%_Mkt_Share'], 
               Icon: e['Name.2_SRC'], 
             }
           })

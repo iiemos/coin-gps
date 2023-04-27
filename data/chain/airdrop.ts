@@ -3,7 +3,7 @@ export default {
     {
       Name: "Coinmarketcap",
       Icon: "/img/exchange/CoinMarketCap.svg",
-      Type: ["Airdrop News"],
+      Type: ["空头资讯"],
       OfficialUrl: "https://coinmarketcap.com/zh/airdrop/",
       Twitter: "",
       Telegram: "",
@@ -15,7 +15,7 @@ export default {
     {
       Name: "Airdrop Alert",
       Icon: "/img/airdrop/AirdropAlert.svg",
-      Type: ["Airdrop News"],
+      Type: ["空头资讯"],
       OfficialUrl: "https://airdropalert.com/",
       Twitter: "",
       Telegram: "",
@@ -27,7 +27,7 @@ export default {
     {
       Name: "DropsEarn",
       Icon: "/img/airdrop/DropsEarn.svg",
-      Type: ["Airdrop News"],
+      Type: ["空头资讯"],
       OfficialUrl: "https://dropsearn.com/airdrops/",
       Twitter: "",
       Telegram: "",
@@ -39,7 +39,7 @@ export default {
     {
       Name: "Cosmos airdrops",
       Icon: "/img/airdrop/CosmosAirdrops.svg",
-      Type: ["Airdrop News"],
+      Type: ["空头资讯"],
       OfficialUrl: "https://www.cosmosairdrops.io/",
       Twitter: "",
       Telegram: "",
@@ -51,7 +51,7 @@ export default {
     {
       Name: "Airdrops",
       Icon: "",
-      Type: ["Airdrop News"],
+      Type: ["空头资讯"],
       OfficialUrl: "https://airdrops.io/",
       Twitter: "",
       Telegram: "",
@@ -63,7 +63,7 @@ export default {
     {
       Name: "notion",
       Icon: "/img/airdrop/Notion.svg",
-      Type: ["Airdrop News"],
+      Type: ["空头资讯"],
       OfficialUrl:
         "https://zlexdl.notion.site/db2e69b82a364d9e8bd356c4c73a228c?v=b3a4e992cd014603975d50df4e0fe9af",
       Twitter: "",
@@ -76,7 +76,7 @@ export default {
     {
       Name: "Notion",
       Icon: "/img/airdrop/Notion.svg",
-      Type: ["Airdrop News"],
+      Type: ["空头资讯"],
       OfficialUrl:
         "https://mysterious-helicopter-d3e.notion.site/c82f9630a2a54d4384a27db97591d093?v=0e8f5d3b955547a8a30c346bf3f0cffc",
       Twitter: "",
@@ -89,7 +89,7 @@ export default {
     {
       Name: "Earni",
       Icon: "/img/airdrop/Earni.svg",
-      Type: ["Airdrop News"],
+      Type: ["空头资讯"],
       OfficialUrl: "https://earni.fi/",
       Twitter: "",
       Telegram: "",
@@ -101,7 +101,7 @@ export default {
     {
       Name: "MESSARI",
       Icon: "/img/airdrop/MESSARI.svg",
-      Type: ["Airdrop News"],
+      Type: ["空头资讯"],
       OfficialUrl: "https://messari.io/fundraising-data",
       Twitter: "",
       Telegram: "",
