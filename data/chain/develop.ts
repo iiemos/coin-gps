@@ -74,7 +74,7 @@ export default {
     },
     {
       Name: "Etherscan",
-      Icon: "",
+      Icon: "/img/NFT/Etherscan.svg",
       Type: ["Docs"],
       OfficialUrl: "https://etherscan.io/apis",
       Twitter: "",
@@ -242,7 +242,7 @@ export default {
     },
     {
       Name: "Solana Cookbook",
-      Icon: "",
+      Icon: "/img/crypto-logo/Solana (SOL).svg",
       Type: ["Docs"],
       OfficialUrl: "https://solanacookbook.com/",
       Twitter: "",
@@ -254,7 +254,7 @@ export default {
     },
     {
       Name: "Solana (Crate)",
-      Icon: "",
+      Icon: "/img/crypto-logo/Solana (SOL).svg",
       Type: ["Docs"],
       OfficialUrl:
         "https://docs.rs/solana-program/latest/solana_program/index.html",
@@ -279,7 +279,7 @@ export default {
     },
     {
       Name: "Arbitrum",
-      Icon: "",
+      Icon: "/img/crypto-logo/Arbitrum (ARB).svg",
       Type: ["Docs"],
       OfficialUrl:
         "https://developer.offchainlabs.com/docs/developer_quickstart",
@@ -304,7 +304,7 @@ export default {
     },
     {
       Name: "Polygon",
-      Icon: "",
+      Icon: "/img/crypto-logo/Polygon (MATIC).svg",
       Type: ["Docs"],
       OfficialUrl:
         "https://docs.polygon.technology/docs/develop/getting-started/",

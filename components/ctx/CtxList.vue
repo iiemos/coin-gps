@@ -16,6 +16,13 @@ defineProps({
     required: false
   }
 })
+const getColorClass = (score:any) => {
+  return {
+    'text-green-500': score > 6,
+    'text-amber-500': score <= 6 && score > 4,
+    'text-red-500': score <= 4,
+  }
+}
 
 const dialogVisible = ref(false)
 const currentItem: any = ref({})
@@ -30,7 +37,7 @@ const errorImg = (event: any) => {
 
 <template>
   <div class="list_warp">
-    <ul role="list" class="divide-y divide-gray-100">
+    <ul role="list" class="divide-y divide-gray-100 dark:divide-gray-800">
       <li class="_chain_item cursor-pointer flex justify-between gap-x-6 py-5" v-for="(item, idx) in dataList" :key="idx"
         @click="changeItem(item)">
         <div class="flex gap-x-4">
@@ -43,24 +50,59 @@ const errorImg = (event: any) => {
               @error="errorImg">
           </div>
           <div class="flex-1">
-            <p class="text-sm font-semibold leading-6 text-gray-900">
+            <p class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
               {{ item.Name }}
               <span v-if="item.CoinName" class=" font-normal text-sm u-text-gray-500 sm:min-h-[20px] mb-4">
                 {{ item.CoinName }}
               </span>
             </p>
-            <div v-if="item.Type" class="_chain_item_protocols text-sm sm:text-base">
-              Type:
+            <div v-if="item.Type" class="text-sm sm:text-base">
+              类型:
               <span v-for="(tItm, idx) in  item.Type" :key="tItm">
                 <span v-if="idx <= 3"
                   class="rounded-full bg-primary/20 px-1.5 py-0.5 text-xs tracking-wider m-1 bg-purple-100 text-purple-500 dark:bg-white/10 dark:text-orange-300 astro-ES6RJE63">{{ tItm }}</span>
               </span>
               <span class="text-purple-500  dark:text-orange-300" v-if="item.Type.length > 3">...</span>
             </div>
-            <div class="_chain_item_protocols">
-              <span v-if="item.Protocols" class="text-sm sm:text-base">Protocols: {{ item.Protocols }}</span>
+            <div v-if="item.Score" class="flex flex-wrap items-center">
+              <span class="text-sm">评分</span>
+              <ScoreIcon :score="Number(item.Score)"/>
+              <span class="text-base font-bold" :class="getColorClass(item.Score)">{{ item.Score }}</span>
             </div>
-            <p class="_item_desc mt-1 text-xs leading-5 text-gray-500 break-words">
+            <div class="flex flex-wrap">
+              <span class="text-xs" v-if="item.Protocols">
+                协议: {{ item.Protocols }}
+              </span>
+              <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 dark:bg-gray-900 rounded-md text-center" v-if="item.Markets">
+                <div class="mb-1 text-base">{{ item.Markets }}</div>  
+                市场
+              </span>
+              <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 dark:bg-gray-900 rounded-md text-center" v-if="item.MktShare">
+                <div class="mb-1 text-base">{{ item.MktShare }}</div> 
+                市场占有率
+              </span>
+              <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 dark:bg-gray-900 rounded-md text-center" v-if="item.Launched">
+                <div class="mb-1 text-base">{{ item.Launched }}</div> 
+                启动时间
+              </span>
+              <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 dark:bg-gray-900 rounded-md text-center" v-if="item.Coins">
+                <div class="mb-1 text-base">{{ item.Coins }}</div>  
+                币种
+              </span>
+              <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 dark:bg-gray-900 rounded-md text-center" v-if="item.Liquidity">
+                <div class="mb-1 text-base">{{ item.Liquidity }}</div>  
+                流动性
+              </span>
+              <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 dark:bg-gray-900 rounded-md text-center" v-if="item.WeeklyVisits">
+                <div class="mb-1 text-base">{{ item.WeeklyVisits }}</div>  
+                每周访问次数
+              </span>
+              <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 dark:bg-gray-900 rounded-md text-center" v-if="item.FiatSupported1">
+                <div class="mb-1 text-base">{{ item.FiatSupported1 }}</div>  
+                法币支持
+              </span>
+            </div>
+            <p class="_item_desc mt-2 text-xs leading-5 text-gray-500 break-words">
               {{ item.Desc }}
             </p>
           </div>
@@ -69,17 +111,68 @@ const errorImg = (event: any) => {
     </ul>
     <client-only>
       <el-dialog v-model="dialogVisible" align-center class="max-w-screen-sm" style="width: 90%;border-radius: 10px;">
-        <div class="model_warp text-center">
+        <div class="model_warp">
           <img class="_model_item_bg_img absolute top-4 w-20 h-20 sm:w-40 sm:h-40 inset-0 opacity-20 blur-md rounded-full"
             :src="currentItem.Icon" loading="lazy">
           <img class="w-10 h-10  sm:w-20 sm:h-20 rounded-full m-auto" :src="currentItem.Icon" @error="errorImg"
             loading="lazy" />
-          <div class="mt-8 text-base font-semibold leading-6 text-gray-900">{{ currentItem.Name }}</div>
-          <div class="text-sm sm:text-base" v-if="currentItem.Markets">Markets: {{ currentItem.Markets }}</div>
-          <div class="mt-2 text-sm text-gray-500">
-            {{ currentItem.Desc }}
+          <div class="mt-8 text-center text-base font-semibold leading-6 text-gray-900 ">{{ currentItem.Name }}</div>
+          <div v-if="currentItem.Score" class="flex flex-wrap items-center mt-2">
+            <span class="text-sm font-bold">评分</span>
+            <ScoreIcon :score="Number(currentItem.Score)"/>
+            <span class="text-base font-bold" :class="getColorClass(currentItem.Score)">{{ currentItem.Score }}</span>
           </div>
-          <div class="flex items-center flex-wrap justify-start gap-3 mt-8">
+          <div v-if="currentItem.Type" class="text-sm sm:text-base">
+            类型:
+            <span v-for="(tItm, idx) in  currentItem.Type" :key="idx">
+              <span
+                class="rounded-full bg-primary/20 px-1.5 py-0.5 text-xs tracking-wider m-1 bg-purple-100 text-purple-500 dark:bg-white/10 dark:text-orange-300 astro-ES6RJE63">{{ tItm }}</span>
+            </span>
+          </div>
+          <div class="flex flex-wrap">
+            <div v-if="currentItem.Protocols" class="flex items-center flex-wrap justify-start gap-3 mt-4">
+              <h2 class="flex items-center font-mono text-sm font-medium leading-7 text-slate-900">
+                <svg aria-hidden="true"
+                  viewBox="0 0 10 10" class="h-2.5 w-2.5">
+                  <path d="M0 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5Z" class="fill-lime-300">
+                  </path>
+                  <path d="M6 1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V1Z" class="fill-green-300">
+                  </path>
+                </svg>
+                <span class="ml-2.5">协议：</span>
+              </h2>
+              <span class="text-gray-900">{{ currentItem.Protocols }}</span>
+            </div>
+            <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 rounded-md text-center" v-if="currentItem.Markets">
+              <div class="mb-1 text-base">{{ currentItem.Markets }}</div>  
+              市场
+            </span>
+            <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 rounded-md text-center" v-if="currentItem.MktShare">
+                <div class="mb-1 text-base">{{ currentItem.MktShare }}</div> 
+                市场占有率
+              </span>
+              <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 rounded-md text-center" v-if="currentItem.Launched">
+                <div class="mb-1 text-base">{{ currentItem.Launched }}</div> 
+                启动时间
+              </span>
+            <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 rounded-md" v-if="currentItem.Coins">
+              <div class="mb-1 text-base">{{ currentItem.Coins }}</div>  
+              币种
+            </span>
+            <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 rounded-md text-center" v-if="currentItem.Liquidity">
+              <div class="mb-1 text-base">{{ currentItem.Liquidity }}</div>  
+              流动性
+            </span>
+            <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 rounded-md text-center" v-if="currentItem.WeeklyVisits">
+              <div class="mb-1 text-base">{{ currentItem.WeeklyVisits }}</div>  
+              每周访问次数
+            </span>
+            <span class="text-xs mr-2 mt-2 px-4 py-1 bg-gray-100 rounded-md text-center" v-if="currentItem.FiatSupported1">
+              <div class="mb-1 text-base">{{ currentItem.FiatSupported1 }}</div>  
+              法币支持
+            </span>
+          </div>
+          <div class="flex items-center flex-wrap justify-start gap-3 mt-4">
             <h2 class="flex items-center font-mono text-sm font-medium leading-7 text-slate-900">
               <svg aria-hidden="true"
                 viewBox="0 0 10 10" class="h-2.5 w-2.5">
@@ -106,7 +199,7 @@ const errorImg = (event: any) => {
               <icon-link class="ml-2 w-5 h-5 right-4 top-4 z-50 text-gray-500" />
             </NuxtLink>
           </div>
-          <div class="flex items-center justify-start gap-3 mt-8">
+          <div class="flex items-center justify-start gap-3 mt-4">
             <h2 class="flex items-center font-mono text-sm font-medium leading-7 text-slate-900">
               <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5"><path d="M0 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5Z" class="fill-indigo-300"></path><path d="M6 1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V1Z" class="fill-blue-300"></path></svg>
               <span class="ml-2.5">社交媒体：</span>
@@ -127,6 +220,9 @@ const errorImg = (event: any) => {
               target="_blank">
               <Icon class="text-2xl" name="fa-brands:facebook" />
             </NuxtLink>
+          </div>
+          <div class="mt-8 text-sm text-gray-500">
+            {{ currentItem.Desc }}
           </div>
         </div>
       </el-dialog>
@@ -175,10 +271,10 @@ css({
         'zIndex': 1,
       }
     },
-    '._chain_item_protocols': {
-      'max-width': '260px',
-      'width': 'auto',
-    }
+    // '._chain_item_protocols': {
+    //   // 'max-width': '260px',
+    //   'width': 'auto',
+    // }
   },
   '._list_item_bg_img': {
     'filter': 'blur(5px)',

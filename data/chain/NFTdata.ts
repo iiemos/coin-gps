@@ -218,7 +218,7 @@ export default {
     },
     {
       Name: "Nfteye",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/Nfteye.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://nfteye.io/dashboard",
       Twitter: "",
@@ -230,7 +230,7 @@ export default {
     },
     {
       Name: "B4fomo",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/B4fomo.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://www.b4fomo.io/collections",
       Twitter: "",
@@ -242,7 +242,7 @@ export default {
     },
     {
       Name: "Nftspre",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/Nftspre.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://nftspre.com/",
       Twitter: "",
@@ -254,7 +254,7 @@ export default {
     },
     {
       Name: "NFTNerds",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/NFTNerds.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://nftnerds.ai/trending",
       Twitter: "",
@@ -266,7 +266,7 @@ export default {
     },
     {
       Name: "NFTGo",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/NFTGo.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://nftgo.io/zh",
       Twitter: "",
@@ -290,7 +290,7 @@ export default {
     },
     {
       Name: "NFTBank",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/NFTBank.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://nftbank.ai/",
       Twitter: "",
@@ -302,7 +302,7 @@ export default {
     },
     {
       Name: "Nft-Stats",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/Nft-Stats.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://www.nft-stats.com/",
       Twitter: "",
@@ -314,7 +314,7 @@ export default {
     },
     {
       Name: "NFTScan",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/NFTScan.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://www.nftscan.com/",
       Twitter: "",
@@ -326,7 +326,7 @@ export default {
     },
     {
       Name: "whatsminting",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/whatsminting.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://whatsminting.live/",
       Twitter: "",
@@ -338,7 +338,7 @@ export default {
     },
     {
       Name: "Solanafloor",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/Solanafloor.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://solanafloor.com/top-collections",
       Twitter: "",
@@ -350,7 +350,7 @@ export default {
     },
     {
       Name: "RaritySniffer",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/RaritySniffer.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://raritysniffer.com/index",
       Twitter: "",
@@ -362,7 +362,7 @@ export default {
     },
     {
       Name: "MintyScore",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/MintyScore.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://mintyscore.com/home",
       Twitter: "",
@@ -374,7 +374,7 @@ export default {
     },
     {
       Name: "Cryptoscores",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/Cryptoscores.svg",
       Type: ["NFT 数据"],
       OfficialUrl: "https://www.cryptoscores.io",
       Twitter: "",

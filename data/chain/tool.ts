@@ -10,7 +10,7 @@ export default {
       Discord: "",
       Facebook: "",
       Team: [],
-      desc: `Google 身份验证器会在您的手机上生成两步验证码。`,
+      Desc: `Google 身份验证器会在您的手机上生成两步验证码。`,
     },
   ],
 };

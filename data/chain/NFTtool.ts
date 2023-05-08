@@ -26,7 +26,7 @@ export default {
     },
     {
       Name: "twitterscan",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/twitterscan.svg",
       Type: ["NFT 工具"],
       OfficialUrl: "https://twitterscan.com/view/nft",
       Twitter: "",

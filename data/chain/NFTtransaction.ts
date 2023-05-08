@@ -110,7 +110,7 @@ export default {
     },
     {
       Name: "Element",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/Element.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://element.market/",
       Twitter: "",
@@ -122,7 +122,7 @@ export default {
     },
     {
       Name: "Kolo",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/Kolo.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://www.kolo.market/",
       Twitter: "",
@@ -134,7 +134,7 @@ export default {
     },
     {
       Name: "SuperRare",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/SuperRare.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://superrare.com/",
       Twitter: "",
@@ -146,7 +146,7 @@ export default {
     },
     {
       Name: "VIV3",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/VIV3.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://viv3.com/",
       Twitter: "",
@@ -158,7 +158,7 @@ export default {
     },
     {
       Name: "Tofunft",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/Tofunft.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://tofunft.com/zh-CN",
       Twitter: "",
@@ -170,7 +170,7 @@ export default {
     },
     {
       Name: "X.xyz",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/X.xyz.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://x.xyz/",
       Twitter: "",
@@ -182,7 +182,7 @@ export default {
     },
     {
       Name: "rarible",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/rarible.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://rarible.com/items",
       Twitter: "",
@@ -194,7 +194,7 @@ export default {
     },
     {
       Name: "fractional",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/fractional.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://fractional.art/",
       Twitter: "",
@@ -206,7 +206,7 @@ export default {
     },
     {
       Name: "Mintverse",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/Mintverse.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://www.mintverse.com/",
       Twitter: "",
@@ -218,7 +218,7 @@ export default {
     },
     {
       Name: "SWAP.KIWI",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/SWAP.KIWI.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://swap.kiwi/",
       Twitter: "",
@@ -230,7 +230,7 @@ export default {
     },
     {
       Name: "NFTrade",
-      Icon: "/img/NFT/.svg",
+      Icon: "/img/NFT/NFTrade.svg",
       Type: ["NFT 交易"],
       OfficialUrl: "https://nftrade.com/",
       Twitter: "",
