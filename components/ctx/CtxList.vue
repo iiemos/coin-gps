@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import defaultImg from '@/assets/img/default.svg'
-defineProps({
+const props = defineProps({
   dataList: {
     type: [Array, Object],
     default: [] || {}
@@ -15,6 +15,22 @@ defineProps({
     default: true,
     required: false
   }
+})
+const isShowMore = ref(true) // 是否显示加载更多按钮
+const pageSize = 50 // 每页显示的数量
+const currentPage = ref(1) // 每页显示的数量
+const start = (currentPage.value - 1) * pageSize // 当前页的起始索引
+const end = start + pageSize // 当前页的结束索引
+const currentList = ref( props.dataList.slice(start, end) )// 当前页需要显示的数据
+if(end >= props.dataList.length) isShowMore.value = false
+watch(currentPage, () => {
+  const start = (currentPage.value - 1) * pageSize
+  const end = start + pageSize
+  console.log('start',start)
+  console.log('end',end)
+  const newList = props.dataList.slice(start, end)
+  currentList.value = [...currentList.value, ...newList]
+  if(end >= props.dataList.length) isShowMore.value = false
 })
 const getColorClass = (score:any) => {
   return {
@@ -33,12 +49,16 @@ const changeItem = (itm: any) => {
 const errorImg = (event: any) => {
   event.target.src = defaultImg
 }
+const loadMore = () => {
+  // 加载更多逻辑
+  currentPage.value++
+}
 </script>
 
 <template>
   <div class="list_warp">
     <ul role="list" class="divide-y divide-gray-100 dark:divide-gray-800">
-      <li class="_chain_item cursor-pointer flex justify-between gap-x-6 py-5" v-for="(item, idx) in dataList" :key="idx"
+      <li class="_chain_item cursor-pointer flex justify-between gap-x-6 py-5" v-for="(item, idx) in currentList" :key="idx"
         @click="changeItem(item)">
         <div class="flex gap-x-4">
           <icon-link
@@ -109,6 +129,13 @@ const errorImg = (event: any) => {
         </div>
       </li>
     </ul>
+    <div v-show="isShowMore" class="flex justify-center mt-4">
+      <div class="inline-flex justify-center gap-2 lg:gap-6 cursor-pointer"  @click="loadMore">
+        <div class="font-medium focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 focus:ring-offset-white dark:focus:ring-offset-black text-base px-4 py-2 relative text-white gradient-border-2 border-gradient-br-gradient-gray-900 hover:border-gradient-br-gradient-black before:absolute before:transition before:duration-200 before:rounded-lg before:opacity-0 hover:before:opacity-75 before:-inset-0.5 before:bg-gradient-to-r before:from-green-400 before:via-teal-400 before:to-teal-600 before:blur-md before:z-[-1] inline-flex items-center rounded-lg focus-visible:ring-2" href="">
+          <span class="text-left break-all line-clamp-1">加载更多</span>
+        </div>  
+      </div>
+    </div>
     <client-only>
       <el-dialog v-model="dialogVisible" align-center class="max-w-screen-sm" style="width: 90%;border-radius: 10px;">
         <div class="model_warp">
